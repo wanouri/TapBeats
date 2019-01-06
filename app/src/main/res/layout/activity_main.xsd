@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="android.support.constraint.ConstraintLayout" type="android.support.constraint.ConstraintLayoutType"/>
+  <xs:complexType name="android.support.constraint.GuidelineType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="and:id" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:orientation" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="res:layout_constraintGuide_begin" xmlns:res="http://schemas.android.com/apk/res-auto"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ButtonType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="and:id" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute type="xs:string" name="style" use="optional"/>
+        <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_marginStart" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_marginLeft" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_marginBottom" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:background" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:text" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:textSize" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:typeface" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="res:layout_constraintBottom_toTopOf" xmlns:res="http://schemas.android.com/apk/res-auto"/>
+        <xs:attribute ref="res:layout_constraintEnd_toEndOf" xmlns:res="http://schemas.android.com/apk/res-auto"/>
+        <xs:attribute ref="res:layout_constraintHorizontal_bias" xmlns:res="http://schemas.android.com/apk/res-auto"/>
+        <xs:attribute ref="res:layout_constraintStart_toStartOf" xmlns:res="http://schemas.android.com/apk/res-auto"/>
+        <xs:attribute ref="res:layout_constraintBottom_toBottomOf" xmlns:res="http://schemas.android.com/apk/res-auto"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="android.support.constraint.ConstraintLayoutType">
+    <xs:sequence>
+      <xs:element type="ButtonType" name="Button" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="android.support.constraint.GuidelineType" name="android.support.constraint.Guideline"/>
+    </xs:sequence>
+    <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="tool:context" xmlns:tool="http://schemas.android.com/tools"/>
+  </xs:complexType>
+</xs:schema>
